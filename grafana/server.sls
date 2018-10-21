@@ -50,11 +50,12 @@ grafana_copy_default_dashboards:
     - service: grafana_service
 
 grafana_set_up_provisioner:
-  file.recurse:
+  file.managed:
     - name: /usr/share/grafana/dashboards/provisioner.yaml
     - source: salt://grafana/files/provisioner.yaml
     - user: grafana
     - group: grafana
+    - makedirs: true
     - require:
       - pkg: grafana_packages
     - require_in:
