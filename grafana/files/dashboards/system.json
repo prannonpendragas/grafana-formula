@@ -69,7 +69,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_COMPUNAUT_INFLUXDB}",
+      "datasource": "compunaut_influxdb",
       "fill": 1,
       "gridPos": {
         "h": 5,
@@ -282,7 +282,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_COMPUNAUT_INFLUXDB}",
+      "datasource": "compunaut_influxdb",
       "fill": 1,
       "gridPos": {
         "h": 5,
@@ -539,7 +539,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_COMPUNAUT_INFLUXDB}",
+      "datasource": "compunaut_influxdb",
       "fill": 1,
       "gridPos": {
         "h": 5,
@@ -964,7 +964,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_COMPUNAUT_INFLUXDB}",
+      "datasource": "compunaut_influxdb",
       "fill": 1,
       "gridPos": {
         "h": 5,
@@ -1144,7 +1144,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_COMPUNAUT_INFLUXDB}",
+      "datasource": "compunaut_influxdb",
       "fill": 1,
       "gridPos": {
         "h": 5,
@@ -1336,7 +1336,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_COMPUNAUT_INFLUXDB}",
+      "datasource": "compunaut_influxdb",
       "fill": 1,
       "gridPos": {
         "h": 5,
@@ -1456,7 +1456,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_COMPUNAUT_INFLUXDB}",
+      "datasource": "compunaut_influxdb",
       "fill": 1,
       "gridPos": {
         "h": 5,
@@ -1653,7 +1653,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_COMPUNAUT_INFLUXDB}",
+        "datasource": "compunaut_influxdb",
         "hide": 0,
         "includeAll": true,
         "label": "Node",
@@ -1674,7 +1674,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_COMPUNAUT_INFLUXDB}",
+        "datasource": "compunaut_influxdb",
         "hide": 0,
         "includeAll": true,
         "label": "Disk",
@@ -1695,7 +1695,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_COMPUNAUT_INFLUXDB}",
+        "datasource": "compunaut_influxdb",
         "hide": 0,
         "includeAll": true,
         "label": "Interface",
