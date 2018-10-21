@@ -109,7 +109,7 @@ grafana_service:
   - enable: true
   # It is needed if client is trying to set datasource or dashboards before
   # server is ready.
-  - init_delay: 15
+  - init_delay: 30
   - watch:
     - file: /etc/grafana/grafana.ini
     - file: /etc/default/grafana-server
