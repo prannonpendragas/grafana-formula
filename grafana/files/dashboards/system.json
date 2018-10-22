@@ -1,34 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_COMPUNAUT_INFLUXDB",
-      "label": "compunaut_influxdb",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "influxdb",
-      "pluginName": "InfluxDB"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "5.3.1"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": "5.0.0"
-    },
-    {
-      "type": "datasource",
-      "id": "influxdb",
-      "name": "InfluxDB",
-      "version": "5.0.0"
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -46,8 +16,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
-  "id": null,
-  "iteration": 1540102439247,
+  "iteration": 1540171369937,
   "links": [],
   "panels": [
     {
@@ -61,6 +30,13 @@
       "id": 20,
       "panels": [],
       "repeat": "node",
+      "scopedVars": {
+        "node": {
+          "selected": true,
+          "text": "compunaut-consul01",
+          "value": "compunaut-consul01"
+        }
+      },
       "title": "CPU / Mem - $node",
       "type": "row"
     },
@@ -95,6 +71,13 @@
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
+      "scopedVars": {
+        "node": {
+          "selected": true,
+          "text": "compunaut-consul01",
+          "value": "compunaut-consul01"
+        }
+      },
       "seriesOverrides": [],
       "spaceLength": 10,
       "stack": false,
@@ -308,6 +291,13 @@
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
+      "scopedVars": {
+        "node": {
+          "selected": true,
+          "text": "compunaut-consul01",
+          "value": "compunaut-consul01"
+        }
+      },
       "seriesOverrides": [],
       "spaceLength": 10,
       "stack": true,
@@ -567,6 +557,13 @@
       "renderer": "flot",
       "repeat": null,
       "repeatDirection": "v",
+      "scopedVars": {
+        "node": {
+          "selected": true,
+          "text": "compunaut-consul01",
+          "value": "compunaut-consul01"
+        }
+      },
       "seriesOverrides": [],
       "spaceLength": 10,
       "stack": true,
@@ -990,6 +987,13 @@
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
+      "scopedVars": {
+        "node": {
+          "selected": true,
+          "text": "compunaut-consul01",
+          "value": "compunaut-consul01"
+        }
+      },
       "seriesOverrides": [],
       "spaceLength": 10,
       "stack": false,
@@ -1133,6 +1137,13 @@
       "id": 25,
       "panels": [],
       "repeat": "node",
+      "scopedVars": {
+        "node": {
+          "selected": true,
+          "text": "compunaut-consul01",
+          "value": "compunaut-consul01"
+        }
+      },
       "title": "Disk - $node",
       "type": "row"
     },
@@ -1173,6 +1184,213 @@
       "renderer": "flot",
       "repeat": "disk",
       "repeatDirection": "h",
+      "scopedVars": {
+        "disk": {
+          "selected": false,
+          "text": "/",
+          "value": "/"
+        },
+        "node": {
+          "selected": true,
+          "text": "compunaut-consul01",
+          "value": "compunaut-consul01"
+        }
+      },
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": true,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "Used",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "disk",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "used"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "path",
+              "operator": "=~",
+              "value": "/^$disk$/"
+            }
+          ]
+        },
+        {
+          "alias": "Free",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "disk",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "free"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "path",
+              "operator": "=~",
+              "value": "/^$disk$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Disk Usage - $disk",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "bits",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Free": "#629e51",
+        "Used": "#bf1b00"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "compunaut_influxdb",
+      "fill": 1,
+      "gridPos": {
+        "h": 5,
+        "w": 12,
+        "x": 12,
+        "y": 12
+      },
+      "id": 31,
+      "legend": {
+        "avg": false,
+        "current": true,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "minSpan": 8,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540171369937,
+      "repeatPanelId": 10,
+      "scopedVars": {
+        "disk": {
+          "selected": false,
+          "text": "/boot",
+          "value": "/boot"
+        },
+        "node": {
+          "selected": true,
+          "text": "compunaut-consul01",
+          "value": "compunaut-consul01"
+        }
+      },
       "seriesOverrides": [],
       "spaceLength": 10,
       "stack": true,
@@ -1328,6 +1546,13 @@
       "id": 30,
       "panels": [],
       "repeat": "node",
+      "scopedVars": {
+        "node": {
+          "selected": true,
+          "text": "compunaut-consul01",
+          "value": "compunaut-consul01"
+        }
+      },
       "title": "Network - $node",
       "type": "row"
     },
@@ -1362,6 +1587,13 @@
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
+      "scopedVars": {
+        "node": {
+          "selected": true,
+          "text": "compunaut-consul01",
+          "value": "compunaut-consul01"
+        }
+      },
       "seriesOverrides": [],
       "spaceLength": 10,
       "stack": false,
@@ -1485,6 +1717,430 @@
       "renderer": "flot",
       "repeat": "interface",
       "repeatDirection": "h",
+      "scopedVars": {
+        "interface": {
+          "selected": false,
+          "text": "ens2",
+          "value": "ens2"
+        },
+        "node": {
+          "selected": true,
+          "text": "compunaut-consul01",
+          "value": "compunaut-consul01"
+        }
+      },
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "Bytes RX",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "net",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "bytes_recv"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              },
+              {
+                "params": [],
+                "type": "difference"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "interface",
+              "operator": "=~",
+              "value": "/^$interface$/"
+            }
+          ]
+        },
+        {
+          "alias": "Bytes TX",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "net",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "bytes_sent"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              },
+              {
+                "params": [],
+                "type": "difference"
+              },
+              {
+                "params": [
+                  "*-1"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "interface",
+              "operator": "=~",
+              "value": "/^$interface$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Network Throughput - $interface",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "Bps",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "compunaut_influxdb",
+      "fill": 1,
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 8,
+        "y": 23
+      },
+      "id": 32,
+      "legend": {
+        "avg": false,
+        "current": true,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "minSpan": 5,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540171369937,
+      "repeatPanelId": 13,
+      "scopedVars": {
+        "interface": {
+          "selected": false,
+          "text": "ens3",
+          "value": "ens3"
+        },
+        "node": {
+          "selected": true,
+          "text": "compunaut-consul01",
+          "value": "compunaut-consul01"
+        }
+      },
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "Bytes RX",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "net",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "bytes_recv"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              },
+              {
+                "params": [],
+                "type": "difference"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "interface",
+              "operator": "=~",
+              "value": "/^$interface$/"
+            }
+          ]
+        },
+        {
+          "alias": "Bytes TX",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "net",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "bytes_sent"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              },
+              {
+                "params": [],
+                "type": "difference"
+              },
+              {
+                "params": [
+                  "*-1"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "interface",
+              "operator": "=~",
+              "value": "/^$interface$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Network Throughput - $interface",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "Bps",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "compunaut_influxdb",
+      "fill": 1,
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 16,
+        "y": 23
+      },
+      "id": 33,
+      "legend": {
+        "avg": false,
+        "current": true,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "minSpan": 5,
+      "nullPointMode": "connected",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540171369937,
+      "repeatPanelId": 13,
+      "scopedVars": {
+        "interface": {
+          "selected": false,
+          "text": "tun0",
+          "value": "tun0"
+        },
+        "node": {
+          "selected": true,
+          "text": "compunaut-consul01",
+          "value": "compunaut-consul01"
+        }
+      },
       "seriesOverrides": [],
       "spaceLength": 10,
       "stack": false,
@@ -1652,7 +2308,13 @@
     "list": [
       {
         "allValue": null,
-        "current": {},
+        "current": {
+          "tags": [],
+          "text": "compunaut-consul01",
+          "value": [
+            "compunaut-consul01"
+          ]
+        },
         "datasource": "compunaut_influxdb",
         "hide": 0,
         "includeAll": true,
@@ -1673,7 +2335,10 @@
       },
       {
         "allValue": null,
-        "current": {},
+        "current": {
+          "text": "All",
+          "value": "$__all"
+        },
         "datasource": "compunaut_influxdb",
         "hide": 0,
         "includeAll": true,
@@ -1694,7 +2359,10 @@
       },
       {
         "allValue": null,
-        "current": {},
+        "current": {
+          "text": "All",
+          "value": "$__all"
+        },
         "datasource": "compunaut_influxdb",
         "hide": 0,
         "includeAll": true,
@@ -1748,5 +2416,5 @@
   "timezone": "browser",
   "title": "System",
   "uid": "H-nPMtxmk",
-  "version": 15
+  "version": 1
 }
