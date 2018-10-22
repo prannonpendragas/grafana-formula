@@ -16,7 +16,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
-  "iteration": 1540171369937,
+  "iteration": 1540178134087,
   "links": [],
   "panels": [
     {
@@ -1377,7 +1377,7 @@
       "renderer": "flot",
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540171369937,
+      "repeatIteration": 1540178134087,
       "repeatPanelId": 10,
       "scopedVars": {
         "disk": {
@@ -1921,7 +1921,7 @@
       "renderer": "flot",
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540171369937,
+      "repeatIteration": 1540178134087,
       "repeatPanelId": 13,
       "scopedVars": {
         "interface": {
@@ -2127,7 +2127,7 @@
       "renderer": "flot",
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540171369937,
+      "repeatIteration": 1540178134087,
       "repeatPanelId": 13,
       "scopedVars": {
         "interface": {
@@ -2303,13 +2303,14 @@
   "refresh": "10s",
   "schemaVersion": 16,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "system"
+  ],
   "templating": {
     "list": [
       {
         "allValue": null,
         "current": {
-          "tags": [],
           "text": "compunaut-consul01",
           "value": [
             "compunaut-consul01"

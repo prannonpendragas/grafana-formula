@@ -1,0 +1,2988 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "Availability of Consul Services based on Consul Checks",
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 8,
+  "iteration": 1540179515095,
+  "links": [],
+  "panels": [
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 27,
+      "panels": [],
+      "title": "Consul Service Availability",
+      "type": "row"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 0,
+        "y": 1
+      },
+      "id": 29,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": "node",
+      "repeatDirection": "h",
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "compunaut-consul01",
+          "value": "compunaut-consul01"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Serf Health",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "serfHealth"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Consul Availability",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 4,
+        "y": 1
+      },
+      "id": 30,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540179515095,
+      "repeatPanelId": 29,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "compunaut-consul02",
+          "value": "compunaut-consul02"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Serf Health",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "serfHealth"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Consul Availability",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 8,
+        "y": 1
+      },
+      "id": 31,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540179515095,
+      "repeatPanelId": 29,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "compunaut-consul03",
+          "value": "compunaut-consul03"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Serf Health",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "serfHealth"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Consul Availability",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 12,
+        "y": 1
+      },
+      "id": 32,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540179515095,
+      "repeatPanelId": 29,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "compunaut-db01",
+          "value": "compunaut-db01"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Serf Health",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "serfHealth"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Consul Availability",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 16,
+        "y": 1
+      },
+      "id": 33,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540179515095,
+      "repeatPanelId": 29,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "compunaut-db02",
+          "value": "compunaut-db02"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Serf Health",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "serfHealth"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Consul Availability",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 20,
+        "y": 1
+      },
+      "id": 34,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540179515095,
+      "repeatPanelId": 29,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "compunaut-db03",
+          "value": "compunaut-db03"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Serf Health",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "serfHealth"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Consul Availability",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 0,
+        "y": 4
+      },
+      "id": 35,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540179515095,
+      "repeatPanelId": 29,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "compunaut-gitlab01",
+          "value": "compunaut-gitlab01"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Serf Health",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "serfHealth"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Consul Availability",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 4,
+        "y": 4
+      },
+      "id": 36,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540179515095,
+      "repeatPanelId": 29,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "compunaut-monitor01",
+          "value": "compunaut-monitor01"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Serf Health",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "serfHealth"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Consul Availability",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 8,
+        "y": 4
+      },
+      "id": 37,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540179515095,
+      "repeatPanelId": 29,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "compunaut-proxy01",
+          "value": "compunaut-proxy01"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Serf Health",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "serfHealth"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Consul Availability",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 12,
+        "y": 4
+      },
+      "id": 38,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540179515095,
+      "repeatPanelId": 29,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "compunaut-proxy02",
+          "value": "compunaut-proxy02"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Serf Health",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "serfHealth"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Consul Availability",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 16,
+        "y": 4
+      },
+      "id": 39,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540179515095,
+      "repeatPanelId": 29,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "compunaut-rundeck01",
+          "value": "compunaut-rundeck01"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Serf Health",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "serfHealth"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Consul Availability",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 20,
+        "y": 4
+      },
+      "id": 40,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540179515095,
+      "repeatPanelId": 29,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "compunaut-vpn02",
+          "value": "compunaut-vpn02"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Serf Health",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "serfHealth"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Consul Availability",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 7
+      },
+      "id": 6,
+      "panels": [],
+      "title": "Database Service Availability",
+      "type": "row"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 0,
+        "y": 8
+      },
+      "id": 2,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 5,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": "db_node",
+      "repeatDirection": "h",
+      "scopedVars": {
+        "db_node": {
+          "selected": false,
+          "text": "compunaut-db01",
+          "value": "compunaut-db01"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "compunaut_mysql_database",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$db_node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "service_name",
+              "operator": "=",
+              "value": "compunaut_mysql_database"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$db_node - MySQL Database",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 8,
+        "y": 8
+      },
+      "id": 41,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 5,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540179515095,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "db_node": {
+          "selected": false,
+          "text": "compunaut-db02",
+          "value": "compunaut-db02"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "compunaut_mysql_database",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$db_node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "service_name",
+              "operator": "=",
+              "value": "compunaut_mysql_database"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$db_node - MySQL Database",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 16,
+        "y": 8
+      },
+      "id": 42,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 5,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540179515095,
+      "repeatPanelId": 2,
+      "scopedVars": {
+        "db_node": {
+          "selected": false,
+          "text": "compunaut-db03",
+          "value": "compunaut-db03"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "compunaut_mysql_database",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$db_node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "service_name",
+              "operator": "=",
+              "value": "compunaut_mysql_database"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$db_node - MySQL Database",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 11
+      },
+      "id": 10,
+      "panels": [],
+      "title": "InfluxDB Service Availability",
+      "type": "row"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 0,
+        "y": 12
+      },
+      "id": 14,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 5,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": "db_node",
+      "repeatDirection": "h",
+      "scopedVars": {
+        "db_node": {
+          "selected": false,
+          "text": "compunaut-db01",
+          "value": "compunaut-db01"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Compunaut InfluxDB In",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$db_node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "service_name",
+              "operator": "=",
+              "value": "compunaut_influxdb_in"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$db_node - InfluxDB In",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 8,
+        "y": 12
+      },
+      "id": 43,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 5,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540179515095,
+      "repeatPanelId": 14,
+      "scopedVars": {
+        "db_node": {
+          "selected": false,
+          "text": "compunaut-db02",
+          "value": "compunaut-db02"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Compunaut InfluxDB In",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$db_node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "service_name",
+              "operator": "=",
+              "value": "compunaut_influxdb_in"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$db_node - InfluxDB In",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 16,
+        "y": 12
+      },
+      "id": 44,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 5,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540179515095,
+      "repeatPanelId": 14,
+      "scopedVars": {
+        "db_node": {
+          "selected": false,
+          "text": "compunaut-db03",
+          "value": "compunaut-db03"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Compunaut InfluxDB In",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$db_node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "service_name",
+              "operator": "=",
+              "value": "compunaut_influxdb_in"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$db_node - InfluxDB In",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 0,
+        "y": 15
+      },
+      "id": 19,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 5,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": "db_node",
+      "repeatDirection": "h",
+      "scopedVars": {
+        "db_node": {
+          "selected": false,
+          "text": "compunaut-db01",
+          "value": "compunaut-db01"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Compunaut InfluxDB Out",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$db_node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "service_name",
+              "operator": "=",
+              "value": "compunaut_influxdb_out"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$db_node - InfluxDB Out",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 8,
+        "y": 15
+      },
+      "id": 45,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 5,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540179515095,
+      "repeatPanelId": 19,
+      "scopedVars": {
+        "db_node": {
+          "selected": false,
+          "text": "compunaut-db02",
+          "value": "compunaut-db02"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Compunaut InfluxDB Out",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$db_node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "service_name",
+              "operator": "=",
+              "value": "compunaut_influxdb_out"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$db_node - InfluxDB Out",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 16,
+        "y": 15
+      },
+      "id": 46,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 5,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540179515095,
+      "repeatPanelId": 19,
+      "scopedVars": {
+        "db_node": {
+          "selected": false,
+          "text": "compunaut-db03",
+          "value": "compunaut-db03"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Compunaut InfluxDB Out",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$db_node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "service_name",
+              "operator": "=",
+              "value": "compunaut_influxdb_out"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$db_node - InfluxDB Out",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    }
+  ],
+  "refresh": "10s",
+  "schemaVersion": 16,
+  "style": "dark",
+  "tags": [
+    "consul"
+  ],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "tags": [],
+          "text": "All",
+          "value": [
+            "$__all"
+          ]
+        },
+        "datasource": "compunaut_influxdb",
+        "hide": 0,
+        "includeAll": true,
+        "label": "Database Node",
+        "multi": true,
+        "name": "db_node",
+        "options": [],
+        "query": "SHOW TAG VALUES WITH KEY = \"host\"",
+        "refresh": 1,
+        "regex": "compunaut-db.*",
+        "skipUrlSync": false,
+        "sort": 1,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "tags": [],
+          "text": "All",
+          "value": [
+            "$__all"
+          ]
+        },
+        "datasource": "compunaut_influxdb",
+        "hide": 0,
+        "includeAll": true,
+        "label": "Node",
+        "multi": true,
+        "name": "node",
+        "options": [],
+        "query": "SHOW TAG VALUES WITH KEY = \"host\"",
+        "refresh": 1,
+        "regex": "compunaut-.*",
+        "skipUrlSync": false,
+        "sort": 1,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-5m",
+    "to": "now-10s"
+  },
+  "timepicker": {
+    "nowDelay": "10s",
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "browser",
+  "title": "Consul Services",
+  "uid": "THC9YTxik",
+  "version": 3
+}
