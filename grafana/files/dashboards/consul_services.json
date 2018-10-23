@@ -16,17 +16,49 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 8,
-  "iteration": 1540179515095,
+  "iteration": 1540267070549,
   "links": [],
   "panels": [
+    {
+      "bgColor": "#2f575e",
+      "clockType": "24 hour",
+      "countdownSettings": {
+        "customFormat": null,
+        "endCountdownTime": "2018-10-24T03:26:00.000Z",
+        "endText": "00:00:00"
+      },
+      "dateSettings": {
+        "dateFormat": "YYYY-MM-DD",
+        "fontSize": "20px",
+        "fontWeight": "normal",
+        "showDate": false
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 48,
+      "links": [],
+      "mode": "time",
+      "offsetFromUtc": null,
+      "offsetFromUtcMinutes": null,
+      "timeSettings": {
+        "customFormat": "HH:mm:ss",
+        "fontSize": "60px",
+        "fontWeight": "bold"
+      },
+      "title": "Current Time",
+      "type": "grafana-clock-panel"
+    },
     {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 0
+        "y": 3
       },
       "id": 27,
       "panels": [],
@@ -55,7 +87,7 @@
         "h": 3,
         "w": 4,
         "x": 0,
-        "y": 1
+        "y": 4
       },
       "id": 29,
       "interval": null,
@@ -188,7 +220,7 @@
         "h": 3,
         "w": 4,
         "x": 4,
-        "y": 1
+        "y": 4
       },
       "id": 30,
       "interval": null,
@@ -221,7 +253,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540179515095,
+      "repeatIteration": 1540267070549,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -323,7 +355,7 @@
         "h": 3,
         "w": 4,
         "x": 8,
-        "y": 1
+        "y": 4
       },
       "id": 31,
       "interval": null,
@@ -356,7 +388,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540179515095,
+      "repeatIteration": 1540267070549,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -458,7 +490,7 @@
         "h": 3,
         "w": 4,
         "x": 12,
-        "y": 1
+        "y": 4
       },
       "id": 32,
       "interval": null,
@@ -491,7 +523,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540179515095,
+      "repeatIteration": 1540267070549,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -593,7 +625,7 @@
         "h": 3,
         "w": 4,
         "x": 16,
-        "y": 1
+        "y": 4
       },
       "id": 33,
       "interval": null,
@@ -626,7 +658,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540179515095,
+      "repeatIteration": 1540267070549,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -728,7 +760,7 @@
         "h": 3,
         "w": 4,
         "x": 20,
-        "y": 1
+        "y": 4
       },
       "id": 34,
       "interval": null,
@@ -761,7 +793,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540179515095,
+      "repeatIteration": 1540267070549,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -863,7 +895,7 @@
         "h": 3,
         "w": 4,
         "x": 0,
-        "y": 4
+        "y": 7
       },
       "id": 35,
       "interval": null,
@@ -896,7 +928,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540179515095,
+      "repeatIteration": 1540267070549,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -998,7 +1030,7 @@
         "h": 3,
         "w": 4,
         "x": 4,
-        "y": 4
+        "y": 7
       },
       "id": 36,
       "interval": null,
@@ -1031,7 +1063,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540179515095,
+      "repeatIteration": 1540267070549,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -1133,7 +1165,7 @@
         "h": 3,
         "w": 4,
         "x": 8,
-        "y": 4
+        "y": 7
       },
       "id": 37,
       "interval": null,
@@ -1166,7 +1198,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540179515095,
+      "repeatIteration": 1540267070549,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -1268,7 +1300,7 @@
         "h": 3,
         "w": 4,
         "x": 12,
-        "y": 4
+        "y": 7
       },
       "id": 38,
       "interval": null,
@@ -1301,7 +1333,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540179515095,
+      "repeatIteration": 1540267070549,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -1403,7 +1435,7 @@
         "h": 3,
         "w": 4,
         "x": 16,
-        "y": 4
+        "y": 7
       },
       "id": 39,
       "interval": null,
@@ -1436,7 +1468,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540179515095,
+      "repeatIteration": 1540267070549,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -1538,7 +1570,7 @@
         "h": 3,
         "w": 4,
         "x": 20,
-        "y": 4
+        "y": 7
       },
       "id": 40,
       "interval": null,
@@ -1571,7 +1603,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540179515095,
+      "repeatIteration": 1540267070549,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -1657,7 +1689,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 7
+        "y": 10
       },
       "id": 6,
       "panels": [],
@@ -1686,7 +1718,7 @@
         "h": 3,
         "w": 8,
         "x": 0,
-        "y": 8
+        "y": 11
       },
       "id": 2,
       "interval": null,
@@ -1819,7 +1851,7 @@
         "h": 3,
         "w": 8,
         "x": 8,
-        "y": 8
+        "y": 11
       },
       "id": 41,
       "interval": null,
@@ -1852,7 +1884,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540179515095,
+      "repeatIteration": 1540267070549,
       "repeatPanelId": 2,
       "scopedVars": {
         "db_node": {
@@ -1954,7 +1986,7 @@
         "h": 3,
         "w": 8,
         "x": 16,
-        "y": 8
+        "y": 11
       },
       "id": 42,
       "interval": null,
@@ -1987,7 +2019,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540179515095,
+      "repeatIteration": 1540267070549,
       "repeatPanelId": 2,
       "scopedVars": {
         "db_node": {
@@ -2073,7 +2105,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 11
+        "y": 14
       },
       "id": 10,
       "panels": [],
@@ -2102,7 +2134,7 @@
         "h": 3,
         "w": 8,
         "x": 0,
-        "y": 12
+        "y": 15
       },
       "id": 14,
       "interval": null,
@@ -2235,7 +2267,7 @@
         "h": 3,
         "w": 8,
         "x": 8,
-        "y": 12
+        "y": 15
       },
       "id": 43,
       "interval": null,
@@ -2268,7 +2300,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540179515095,
+      "repeatIteration": 1540267070549,
       "repeatPanelId": 14,
       "scopedVars": {
         "db_node": {
@@ -2370,7 +2402,7 @@
         "h": 3,
         "w": 8,
         "x": 16,
-        "y": 12
+        "y": 15
       },
       "id": 44,
       "interval": null,
@@ -2403,7 +2435,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540179515095,
+      "repeatIteration": 1540267070549,
       "repeatPanelId": 14,
       "scopedVars": {
         "db_node": {
@@ -2505,7 +2537,7 @@
         "h": 3,
         "w": 8,
         "x": 0,
-        "y": 15
+        "y": 18
       },
       "id": 19,
       "interval": null,
@@ -2638,7 +2670,7 @@
         "h": 3,
         "w": 8,
         "x": 8,
-        "y": 15
+        "y": 18
       },
       "id": 45,
       "interval": null,
@@ -2671,7 +2703,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540179515095,
+      "repeatIteration": 1540267070549,
       "repeatPanelId": 19,
       "scopedVars": {
         "db_node": {
@@ -2773,7 +2805,7 @@
         "h": 3,
         "w": 8,
         "x": 16,
-        "y": 15
+        "y": 18
       },
       "id": 46,
       "interval": null,
@@ -2806,7 +2838,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540179515095,
+      "repeatIteration": 1540267070549,
       "repeatPanelId": 19,
       "scopedVars": {
         "db_node": {
@@ -2898,7 +2930,6 @@
       {
         "allValue": null,
         "current": {
-          "tags": [],
           "text": "All",
           "value": [
             "$__all"
@@ -2925,7 +2956,6 @@
       {
         "allValue": null,
         "current": {
-          "tags": [],
           "text": "All",
           "value": [
             "$__all"
@@ -2984,5 +3014,5 @@
   "timezone": "browser",
   "title": "Consul Services",
   "uid": "THC9YTxik",
-  "version": 3
+  "version": 1
 }

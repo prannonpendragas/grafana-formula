@@ -16,7 +16,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
-  "iteration": 1540178134087,
+  "iteration": 1540265204263,
   "links": [],
   "panels": [
     {
@@ -1127,12 +1127,45 @@
       }
     },
     {
+      "bgColor": "#2f575e",
+      "clockType": "24 hour",
+      "countdownSettings": {
+        "customFormat": null,
+        "endCountdownTime": "2018-10-24T03:26:00.000Z",
+        "endText": "00:00:00"
+      },
+      "dateSettings": {
+        "dateFormat": "YYYY-MM-DD",
+        "fontSize": "20px",
+        "fontWeight": "normal",
+        "showDate": false
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 11
+      },
+      "id": 36,
+      "links": [],
+      "mode": "time",
+      "offsetFromUtc": "",
+      "offsetFromUtcMinutes": null,
+      "timeSettings": {
+        "customFormat": "HH:mm:ss",
+        "fontSize": "60px",
+        "fontWeight": "bold"
+      },
+      "title": "Current Time",
+      "type": "grafana-clock-panel"
+    },
+    {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 11
+        "y": 14
       },
       "id": 25,
       "panels": [],
@@ -1161,7 +1194,7 @@
         "h": 5,
         "w": 12,
         "x": 0,
-        "y": 12
+        "y": 15
       },
       "id": 10,
       "legend": {
@@ -1354,7 +1387,7 @@
         "h": 5,
         "w": 12,
         "x": 12,
-        "y": 12
+        "y": 15
       },
       "id": 31,
       "legend": {
@@ -1377,7 +1410,7 @@
       "renderer": "flot",
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540178134087,
+      "repeatIteration": 1540265204263,
       "repeatPanelId": 10,
       "scopedVars": {
         "disk": {
@@ -1536,12 +1569,45 @@
       }
     },
     {
+      "bgColor": "#2f575e",
+      "clockType": "24 hour",
+      "countdownSettings": {
+        "customFormat": null,
+        "endCountdownTime": "2018-10-24T03:26:00.000Z",
+        "endText": "00:00:00"
+      },
+      "dateSettings": {
+        "dateFormat": "YYYY-MM-DD",
+        "fontSize": "20px",
+        "fontWeight": "normal",
+        "showDate": false
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 20
+      },
+      "id": 35,
+      "links": [],
+      "mode": "time",
+      "offsetFromUtc": "",
+      "offsetFromUtcMinutes": null,
+      "timeSettings": {
+        "customFormat": "HH:mm:ss",
+        "fontSize": "60px",
+        "fontWeight": "bold"
+      },
+      "title": "Current Time",
+      "type": "grafana-clock-panel"
+    },
+    {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 17
+        "y": 23
       },
       "id": 30,
       "panels": [],
@@ -1567,7 +1633,7 @@
         "h": 5,
         "w": 24,
         "x": 0,
-        "y": 18
+        "y": 24
       },
       "id": 18,
       "legend": {
@@ -1694,7 +1760,7 @@
         "h": 5,
         "w": 8,
         "x": 0,
-        "y": 23
+        "y": 29
       },
       "id": 13,
       "legend": {
@@ -1898,9 +1964,9 @@
         "h": 5,
         "w": 8,
         "x": 8,
-        "y": 23
+        "y": 29
       },
-      "id": 32,
+      "id": 38,
       "legend": {
         "avg": false,
         "current": true,
@@ -1921,7 +1987,7 @@
       "renderer": "flot",
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540178134087,
+      "repeatIteration": 1540265204263,
       "repeatPanelId": 13,
       "scopedVars": {
         "interface": {
@@ -2104,9 +2170,9 @@
         "h": 5,
         "w": 8,
         "x": 16,
-        "y": 23
+        "y": 29
       },
-      "id": 33,
+      "id": 39,
       "legend": {
         "avg": false,
         "current": true,
@@ -2127,7 +2193,7 @@
       "renderer": "flot",
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540178134087,
+      "repeatIteration": 1540265204263,
       "repeatPanelId": 13,
       "scopedVars": {
         "interface": {
@@ -2298,6 +2364,39 @@
         "align": false,
         "alignLevel": null
       }
+    },
+    {
+      "bgColor": "#2f575e",
+      "clockType": "24 hour",
+      "countdownSettings": {
+        "customFormat": null,
+        "endCountdownTime": "2018-10-24T03:26:00.000Z",
+        "endText": "00:00:00"
+      },
+      "dateSettings": {
+        "dateFormat": "YYYY-MM-DD",
+        "fontSize": "20px",
+        "fontWeight": "normal",
+        "showDate": false
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 34
+      },
+      "id": 37,
+      "links": [],
+      "mode": "time",
+      "offsetFromUtc": "",
+      "offsetFromUtcMinutes": null,
+      "timeSettings": {
+        "customFormat": "HH:mm:ss",
+        "fontSize": "60px",
+        "fontWeight": "bold"
+      },
+      "title": "Current Time",
+      "type": "grafana-clock-panel"
     }
   ],
   "refresh": "10s",
