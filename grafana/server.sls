@@ -4,6 +4,7 @@
 grafana_packages:
   pkg.installed:
   - names: {{ server.pkgs }}
+  - refresh: True
 
 /etc/grafana/grafana.ini:
   file.managed:
