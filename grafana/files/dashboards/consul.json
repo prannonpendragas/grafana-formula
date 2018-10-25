@@ -16,7 +16,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1540425110132,
+  "iteration": 1540442112273,
   "links": [],
   "panels": [
     {
@@ -85,7 +85,7 @@
       },
       "gridPos": {
         "h": 1,
-        "w": 8,
+        "w": 6,
         "x": 0,
         "y": 4
       },
@@ -218,8 +218,8 @@
       },
       "gridPos": {
         "h": 1,
-        "w": 8,
-        "x": 8,
+        "w": 6,
+        "x": 6,
         "y": 4
       },
       "id": 149,
@@ -253,7 +253,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 97,
       "scopedVars": {
         "keepalived_node": {
@@ -353,8 +353,8 @@
       },
       "gridPos": {
         "h": 1,
-        "w": 8,
-        "x": 16,
+        "w": 6,
+        "x": 12,
         "y": 4
       },
       "id": 150,
@@ -388,13 +388,148 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 97,
       "scopedVars": {
         "keepalived_node": {
           "selected": false,
           "text": "compunaut-vpn01",
           "value": "compunaut-vpn01"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Serf Health",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$keepalived_node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "service:compunaut_keepalived"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$keepalived_node - Keepalived",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 6,
+        "x": 18,
+        "y": 4
+      },
+      "id": 151,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540442112273,
+      "repeatPanelId": 97,
+      "scopedVars": {
+        "keepalived_node": {
+          "selected": false,
+          "text": "compunaut-vpn02",
+          "value": "compunaut-vpn02"
         }
       },
       "sparkline": {
@@ -638,7 +773,7 @@
         "x": 4,
         "y": 6
       },
-      "id": 151,
+      "id": 152,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -669,7 +804,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -773,7 +908,7 @@
         "x": 8,
         "y": 6
       },
-      "id": 152,
+      "id": 153,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -804,7 +939,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -908,7 +1043,7 @@
         "x": 12,
         "y": 6
       },
-      "id": 153,
+      "id": 154,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -939,7 +1074,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -1043,7 +1178,7 @@
         "x": 16,
         "y": 6
       },
-      "id": 154,
+      "id": 155,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -1074,7 +1209,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -1178,7 +1313,7 @@
         "x": 20,
         "y": 6
       },
-      "id": 155,
+      "id": 156,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -1209,7 +1344,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -1313,7 +1448,7 @@
         "x": 0,
         "y": 7
       },
-      "id": 156,
+      "id": 157,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -1344,7 +1479,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -1448,7 +1583,7 @@
         "x": 4,
         "y": 7
       },
-      "id": 157,
+      "id": 158,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -1479,7 +1614,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -1583,7 +1718,7 @@
         "x": 8,
         "y": 7
       },
-      "id": 158,
+      "id": 159,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -1614,7 +1749,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -1718,7 +1853,7 @@
         "x": 12,
         "y": 7
       },
-      "id": 159,
+      "id": 160,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -1749,7 +1884,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -1853,7 +1988,7 @@
         "x": 16,
         "y": 7
       },
-      "id": 160,
+      "id": 161,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -1884,7 +2019,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -1988,7 +2123,7 @@
         "x": 20,
         "y": 7
       },
-      "id": 161,
+      "id": 162,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -2019,7 +2154,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -2123,7 +2258,7 @@
         "x": 0,
         "y": 8
       },
-      "id": 162,
+      "id": 163,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -2154,13 +2289,418 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
           "selected": false,
           "text": "compunaut-vpn01",
           "value": "compunaut-vpn01"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "OpenVPN",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "service:compunaut_openvpn"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - OpenVPN",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 4,
+        "x": 4,
+        "y": 8
+      },
+      "id": 164,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540442112273,
+      "repeatPanelId": 112,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "compunaut-vpn02",
+          "value": "compunaut-vpn02"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "OpenVPN",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "service:compunaut_openvpn"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - OpenVPN",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 4,
+        "x": 8,
+        "y": 8
+      },
+      "id": 165,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540442112273,
+      "repeatPanelId": 112,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "kvm02",
+          "value": "kvm02"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "OpenVPN",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "service:compunaut_openvpn"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - OpenVPN",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 4,
+        "x": 12,
+        "y": 8
+      },
+      "id": 166,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540442112273,
+      "repeatPanelId": 112,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "salt01",
+          "value": "salt01"
         }
       },
       "sparkline": {
@@ -2404,7 +2944,7 @@
         "x": 4,
         "y": 10
       },
-      "id": 163,
+      "id": 167,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -2435,7 +2975,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -2539,7 +3079,7 @@
         "x": 8,
         "y": 10
       },
-      "id": 164,
+      "id": 168,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -2570,7 +3110,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -2674,7 +3214,7 @@
         "x": 12,
         "y": 10
       },
-      "id": 165,
+      "id": 169,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -2705,7 +3245,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -2809,7 +3349,7 @@
         "x": 16,
         "y": 10
       },
-      "id": 166,
+      "id": 170,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -2840,7 +3380,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -2944,7 +3484,7 @@
         "x": 20,
         "y": 10
       },
-      "id": 167,
+      "id": 171,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -2975,7 +3515,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -3079,7 +3619,7 @@
         "x": 0,
         "y": 11
       },
-      "id": 168,
+      "id": 172,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -3110,7 +3650,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -3214,7 +3754,7 @@
         "x": 4,
         "y": 11
       },
-      "id": 169,
+      "id": 173,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -3245,7 +3785,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -3349,7 +3889,7 @@
         "x": 8,
         "y": 11
       },
-      "id": 170,
+      "id": 174,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -3380,7 +3920,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -3484,7 +4024,7 @@
         "x": 12,
         "y": 11
       },
-      "id": 171,
+      "id": 175,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -3515,7 +4055,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -3619,7 +4159,7 @@
         "x": 16,
         "y": 11
       },
-      "id": 172,
+      "id": 176,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -3650,7 +4190,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -3754,7 +4294,7 @@
         "x": 20,
         "y": 11
       },
-      "id": 173,
+      "id": 177,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -3785,7 +4325,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -3889,7 +4429,7 @@
         "x": 0,
         "y": 12
       },
-      "id": 174,
+      "id": 178,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -3920,13 +4460,418 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
           "selected": false,
           "text": "compunaut-vpn01",
           "value": "compunaut-vpn01"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Serf Health",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "serfHealth"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Consul",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 4,
+        "x": 4,
+        "y": 12
+      },
+      "id": 179,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540442112273,
+      "repeatPanelId": 29,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "compunaut-vpn02",
+          "value": "compunaut-vpn02"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Serf Health",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "serfHealth"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Consul",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 4,
+        "x": 8,
+        "y": 12
+      },
+      "id": 180,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540442112273,
+      "repeatPanelId": 29,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "kvm02",
+          "value": "kvm02"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Serf Health",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "compunaut_one_year",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "check_id",
+              "operator": "=",
+              "value": "serfHealth"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Consul",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": "compunaut_influxdb",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 4,
+        "x": 12,
+        "y": 12
+      },
+      "id": 181,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540442112273,
+      "repeatPanelId": 29,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "salt01",
+          "value": "salt01"
         }
       },
       "sparkline": {
@@ -4170,7 +5115,7 @@
         "x": 4,
         "y": 14
       },
-      "id": 175,
+      "id": 182,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -4201,7 +5146,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -4305,7 +5250,7 @@
         "x": 8,
         "y": 14
       },
-      "id": 176,
+      "id": 183,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -4336,7 +5281,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -4440,7 +5385,7 @@
         "x": 12,
         "y": 14
       },
-      "id": 177,
+      "id": 184,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -4471,7 +5416,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -4575,7 +5520,7 @@
         "x": 16,
         "y": 14
       },
-      "id": 178,
+      "id": 185,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -4606,7 +5551,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -4710,7 +5655,7 @@
         "x": 20,
         "y": 14
       },
-      "id": 179,
+      "id": 186,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -4741,7 +5686,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -4845,7 +5790,7 @@
         "x": 0,
         "y": 15
       },
-      "id": 180,
+      "id": 187,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -4876,7 +5821,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -4980,7 +5925,7 @@
         "x": 4,
         "y": 15
       },
-      "id": 181,
+      "id": 188,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -5011,7 +5956,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -5115,7 +6060,7 @@
         "x": 8,
         "y": 15
       },
-      "id": 182,
+      "id": 189,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -5146,7 +6091,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -5250,7 +6195,7 @@
         "x": 12,
         "y": 15
       },
-      "id": 183,
+      "id": 190,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -5281,7 +6226,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -5385,7 +6330,7 @@
         "x": 16,
         "y": 15
       },
-      "id": 184,
+      "id": 191,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -5416,7 +6361,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -5520,7 +6465,7 @@
         "x": 20,
         "y": 15
       },
-      "id": 185,
+      "id": 192,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -5551,7 +6496,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -5655,7 +6600,7 @@
         "x": 0,
         "y": 16
       },
-      "id": 186,
+      "id": 193,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -5686,13 +6631,418 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
           "selected": false,
           "text": "compunaut-vpn01",
           "value": "compunaut-vpn01"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "compunaut_dnsmasq",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "service_name",
+              "operator": "=",
+              "value": "compunaut_dnsmasq"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Dnsmasq",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 4,
+        "x": 4,
+        "y": 16
+      },
+      "id": 194,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540442112273,
+      "repeatPanelId": 145,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "compunaut-vpn02",
+          "value": "compunaut-vpn02"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "compunaut_dnsmasq",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "service_name",
+              "operator": "=",
+              "value": "compunaut_dnsmasq"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Dnsmasq",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 4,
+        "x": 8,
+        "y": 16
+      },
+      "id": 195,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540442112273,
+      "repeatPanelId": 145,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "kvm02",
+          "value": "kvm02"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "compunaut_dnsmasq",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "service_name",
+              "operator": "=",
+              "value": "compunaut_dnsmasq"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Dnsmasq",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 4,
+        "x": 12,
+        "y": 16
+      },
+      "id": 196,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540442112273,
+      "repeatPanelId": 145,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "salt01",
+          "value": "salt01"
         }
       },
       "sparkline": {
@@ -5936,7 +7286,7 @@
         "x": 8,
         "y": 18
       },
-      "id": 187,
+      "id": 197,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -5967,7 +7317,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 2,
       "scopedVars": {
         "db_node": {
@@ -6071,7 +7421,7 @@
         "x": 16,
         "y": 18
       },
-      "id": 188,
+      "id": 198,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -6102,7 +7452,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 2,
       "scopedVars": {
         "db_node": {
@@ -6352,7 +7702,7 @@
         "x": 8,
         "y": 20
       },
-      "id": 189,
+      "id": 199,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -6383,7 +7733,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 14,
       "scopedVars": {
         "db_node": {
@@ -6487,7 +7837,7 @@
         "x": 16,
         "y": 20
       },
-      "id": 190,
+      "id": 200,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -6518,7 +7868,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 14,
       "scopedVars": {
         "db_node": {
@@ -6755,7 +8105,7 @@
         "x": 8,
         "y": 21
       },
-      "id": 191,
+      "id": 201,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -6786,7 +8136,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 19,
       "scopedVars": {
         "db_node": {
@@ -6890,7 +8240,7 @@
         "x": 16,
         "y": 21
       },
-      "id": 192,
+      "id": 202,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -6921,7 +8271,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 19,
       "scopedVars": {
         "db_node": {
@@ -7171,7 +8521,7 @@
         "x": 4,
         "y": 23
       },
-      "id": 193,
+      "id": 203,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -7202,7 +8552,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -7306,7 +8656,7 @@
         "x": 8,
         "y": 23
       },
-      "id": 194,
+      "id": 204,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -7337,7 +8687,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -7441,7 +8791,7 @@
         "x": 12,
         "y": 23
       },
-      "id": 195,
+      "id": 205,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -7472,7 +8822,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -7576,7 +8926,7 @@
         "x": 16,
         "y": 23
       },
-      "id": 196,
+      "id": 206,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -7607,7 +8957,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -7711,7 +9061,7 @@
         "x": 20,
         "y": 23
       },
-      "id": 197,
+      "id": 207,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -7742,7 +9092,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -7846,7 +9196,7 @@
         "x": 0,
         "y": 24
       },
-      "id": 198,
+      "id": 208,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -7877,7 +9227,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -7981,7 +9331,7 @@
         "x": 4,
         "y": 24
       },
-      "id": 199,
+      "id": 209,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -8012,7 +9362,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -8116,7 +9466,7 @@
         "x": 8,
         "y": 24
       },
-      "id": 200,
+      "id": 210,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -8147,7 +9497,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -8251,7 +9601,7 @@
         "x": 12,
         "y": 24
       },
-      "id": 201,
+      "id": 211,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -8282,7 +9632,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -8386,7 +9736,7 @@
         "x": 16,
         "y": 24
       },
-      "id": 202,
+      "id": 212,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -8417,7 +9767,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -8521,7 +9871,7 @@
         "x": 20,
         "y": 24
       },
-      "id": 203,
+      "id": 213,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -8552,7 +9902,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -8656,7 +10006,7 @@
         "x": 0,
         "y": 25
       },
-      "id": 204,
+      "id": 214,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -8687,13 +10037,418 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
           "selected": false,
           "text": "compunaut-vpn01",
           "value": "compunaut-vpn01"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "compunaut_telegraf",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "service_name",
+              "operator": "=",
+              "value": "compunaut_telegraf"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Telegraf",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 4,
+        "x": 4,
+        "y": 25
+      },
+      "id": 215,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540442112273,
+      "repeatPanelId": 146,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "compunaut-vpn02",
+          "value": "compunaut-vpn02"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "compunaut_telegraf",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "service_name",
+              "operator": "=",
+              "value": "compunaut_telegraf"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Telegraf",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 4,
+        "x": 8,
+        "y": 25
+      },
+      "id": 216,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540442112273,
+      "repeatPanelId": 146,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "kvm02",
+          "value": "kvm02"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "compunaut_telegraf",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "service_name",
+              "operator": "=",
+              "value": "compunaut_telegraf"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$node - Telegraf",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 4,
+        "x": 12,
+        "y": 25
+      },
+      "id": 217,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 4,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1540442112273,
+      "repeatPanelId": 146,
+      "scopedVars": {
+        "node": {
+          "selected": false,
+          "text": "salt01",
+          "value": "salt01"
         }
       },
       "sparkline": {
@@ -8937,7 +10692,7 @@
         "x": 12,
         "y": 27
       },
-      "id": 205,
+      "id": 218,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -8968,7 +10723,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 147,
       "scopedVars": {
         "monitor_node": {
@@ -9218,7 +10973,7 @@
         "x": 12,
         "y": 29
       },
-      "id": 206,
+      "id": 219,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -9249,7 +11004,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1540425110132,
+      "repeatIteration": 1540442112273,
       "repeatPanelId": 148,
       "scopedVars": {
         "haproxy_node": {
@@ -9368,7 +11123,6 @@
       {
         "allValue": null,
         "current": {
-          "tags": [],
           "text": "All",
           "value": [
             "$__all"
@@ -9383,7 +11137,7 @@
         "options": [],
         "query": "SHOW TAG VALUES WITH KEY = \"host\"",
         "refresh": 1,
-        "regex": "compunaut-.*",
+        "regex": ".*",
         "skipUrlSync": false,
         "sort": 1,
         "tagValuesQuery": "",
@@ -9395,7 +11149,6 @@
       {
         "allValue": null,
         "current": {
-          "tags": [],
           "text": "All",
           "value": [
             "$__all"
@@ -9422,6 +11175,7 @@
       {
         "allValue": null,
         "current": {
+          "tags": [],
           "text": "All",
           "value": [
             "$__all"
@@ -9448,7 +11202,6 @@
       {
         "allValue": null,
         "current": {
-          "tags": [],
           "text": "All",
           "value": [
             "$__all"
@@ -9475,8 +11228,8 @@
     ]
   },
   "time": {
-    "from": "now-5m",
-    "to": "now-10s"
+    "from": "now-30s",
+    "to": "now"
   },
   "timepicker": {
     "nowDelay": "10s",
