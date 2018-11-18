@@ -16,8 +16,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
-  "id": 8,
-  "iteration": 1542329763703,
+  "iteration": 1542555517881,
   "links": [],
   "panels": [
     {
@@ -1269,10 +1268,10 @@
         "x": 0,
         "y": 14
       },
-      "id": 106,
+      "id": 133,
       "panels": [],
       "repeat": null,
-      "repeatIteration": 1542329763703,
+      "repeatIteration": 1542555517881,
       "repeatPanelId": 20,
       "scopedVars": {
         "node": {
@@ -1297,7 +1296,7 @@
         "x": 0,
         "y": 15
       },
-      "id": 107,
+      "id": 134,
       "legend": {
         "avg": false,
         "current": true,
@@ -1315,7 +1314,7 @@
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
-      "repeatIteration": 1542329763703,
+      "repeatIteration": 1542555517881,
       "repeatPanelId": 8,
       "repeatedByRow": true,
       "scopedVars": {
@@ -1520,7 +1519,7 @@
         "x": 12,
         "y": 15
       },
-      "id": 108,
+      "id": 135,
       "legend": {
         "avg": false,
         "current": true,
@@ -1538,7 +1537,7 @@
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
-      "repeatIteration": 1542329763703,
+      "repeatIteration": 1542555517881,
       "repeatPanelId": 4,
       "repeatedByRow": true,
       "scopedVars": {
@@ -1789,7 +1788,7 @@
         "x": 0,
         "y": 20
       },
-      "id": 109,
+      "id": 136,
       "legend": {
         "avg": false,
         "current": true,
@@ -1809,7 +1808,7 @@
       "renderer": "flot",
       "repeat": null,
       "repeatDirection": "v",
-      "repeatIteration": 1542329763703,
+      "repeatIteration": 1542555517881,
       "repeatPanelId": 2,
       "repeatedByRow": true,
       "scopedVars": {
@@ -2323,7 +2322,7 @@
         "x": 12,
         "y": 20
       },
-      "id": 110,
+      "id": 137,
       "legend": {
         "avg": false,
         "current": true,
@@ -2341,7 +2340,7 @@
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
-      "repeatIteration": 1542329763703,
+      "repeatIteration": 1542555517881,
       "repeatPanelId": 6,
       "repeatedByRow": true,
       "scopedVars": {
@@ -2491,10 +2490,10 @@
         "x": 0,
         "y": 25
       },
-      "id": 111,
+      "id": 138,
       "panels": [],
       "repeat": null,
-      "repeatIteration": 1542329763703,
+      "repeatIteration": 1542555517881,
       "repeatPanelId": 20,
       "scopedVars": {
         "node": {
@@ -2519,7 +2518,7 @@
         "x": 0,
         "y": 26
       },
-      "id": 112,
+      "id": 139,
       "legend": {
         "avg": false,
         "current": true,
@@ -2537,7 +2536,7 @@
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
-      "repeatIteration": 1542329763703,
+      "repeatIteration": 1542555517881,
       "repeatPanelId": 8,
       "repeatedByRow": true,
       "scopedVars": {
@@ -2742,7 +2741,7 @@
         "x": 12,
         "y": 26
       },
-      "id": 113,
+      "id": 140,
       "legend": {
         "avg": false,
         "current": true,
@@ -2760,7 +2759,7 @@
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
-      "repeatIteration": 1542329763703,
+      "repeatIteration": 1542555517881,
       "repeatPanelId": 4,
       "repeatedByRow": true,
       "scopedVars": {
@@ -3011,7 +3010,7 @@
         "x": 0,
         "y": 31
       },
-      "id": 114,
+      "id": 141,
       "legend": {
         "avg": false,
         "current": true,
@@ -3031,7 +3030,7 @@
       "renderer": "flot",
       "repeat": null,
       "repeatDirection": "v",
-      "repeatIteration": 1542329763703,
+      "repeatIteration": 1542555517881,
       "repeatPanelId": 2,
       "repeatedByRow": true,
       "scopedVars": {
@@ -3545,7 +3544,7 @@
         "x": 12,
         "y": 31
       },
-      "id": 115,
+      "id": 142,
       "legend": {
         "avg": false,
         "current": true,
@@ -3563,7 +3562,7 @@
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
-      "repeatIteration": 1542329763703,
+      "repeatIteration": 1542555517881,
       "repeatPanelId": 6,
       "repeatedByRow": true,
       "scopedVars": {
@@ -4123,7 +4122,7 @@
         "x": 0,
         "y": 37
       },
-      "id": 116,
+      "id": 143,
       "panels": [
         {
           "aliasColors": {
@@ -4139,9 +4138,9 @@
             "h": 5,
             "w": 12,
             "x": 0,
-            "y": 38
+            "y": 37
           },
-          "id": 117,
+          "id": 144,
           "legend": {
             "avg": false,
             "current": true,
@@ -4162,7 +4161,7 @@
           "renderer": "flot",
           "repeat": "disk",
           "repeatDirection": "h",
-          "repeatIteration": 1542329763703,
+          "repeatIteration": 1542555517881,
           "repeatPanelId": 10,
           "repeatedByRow": true,
           "scopedVars": {
@@ -4335,9 +4334,9 @@
             "h": 5,
             "w": 12,
             "x": 12,
-            "y": 38
+            "y": 37
           },
-          "id": 133,
+          "id": 145,
           "legend": {
             "avg": false,
             "current": true,
@@ -4358,8 +4357,8 @@
           "renderer": "flot",
           "repeat": null,
           "repeatDirection": "h",
-          "repeatIteration": 1542329763703,
-          "repeatPanelId": 117,
+          "repeatIteration": 1542555517881,
+          "repeatPanelId": 132,
           "repeatedByRow": true,
           "scopedVars": {
             "disk": {
@@ -4519,7 +4518,7 @@
         }
       ],
       "repeat": null,
-      "repeatIteration": 1542329763703,
+      "repeatIteration": 1542555517881,
       "repeatPanelId": 25,
       "scopedVars": {
         "node": {
@@ -4539,7 +4538,7 @@
         "x": 0,
         "y": 38
       },
-      "id": 119,
+      "id": 146,
       "panels": [
         {
           "aliasColors": {
@@ -4555,9 +4554,9 @@
             "h": 5,
             "w": 12,
             "x": 0,
-            "y": 39
+            "y": 37
           },
-          "id": 120,
+          "id": 147,
           "legend": {
             "avg": false,
             "current": true,
@@ -4578,7 +4577,7 @@
           "renderer": "flot",
           "repeat": "disk",
           "repeatDirection": "h",
-          "repeatIteration": 1542329763703,
+          "repeatIteration": 1542555517881,
           "repeatPanelId": 10,
           "repeatedByRow": true,
           "scopedVars": {
@@ -4751,9 +4750,9 @@
             "h": 5,
             "w": 12,
             "x": 12,
-            "y": 39
+            "y": 37
           },
-          "id": 134,
+          "id": 148,
           "legend": {
             "avg": false,
             "current": true,
@@ -4774,8 +4773,8 @@
           "renderer": "flot",
           "repeat": null,
           "repeatDirection": "h",
-          "repeatIteration": 1542329763703,
-          "repeatPanelId": 120,
+          "repeatIteration": 1542555517881,
+          "repeatPanelId": 132,
           "repeatedByRow": true,
           "scopedVars": {
             "disk": {
@@ -4935,7 +4934,7 @@
         }
       ],
       "repeat": null,
-      "repeatIteration": 1542329763703,
+      "repeatIteration": 1542555517881,
       "repeatPanelId": 25,
       "scopedVars": {
         "node": {
@@ -5720,7 +5719,7 @@
         "x": 0,
         "y": 40
       },
-      "id": 122,
+      "id": 149,
       "panels": [
         {
           "aliasColors": {},
@@ -5735,7 +5734,7 @@
             "x": 0,
             "y": 28
           },
-          "id": 123,
+          "id": 150,
           "legend": {
             "avg": false,
             "current": true,
@@ -5753,7 +5752,7 @@
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
-          "repeatIteration": 1542329763703,
+          "repeatIteration": 1542555517881,
           "repeatPanelId": 18,
           "repeatedByRow": true,
           "scopedVars": {
@@ -5865,7 +5864,7 @@
             "x": 0,
             "y": 33
           },
-          "id": 124,
+          "id": 151,
           "legend": {
             "avg": false,
             "current": true,
@@ -5886,7 +5885,7 @@
           "renderer": "flot",
           "repeat": "interface",
           "repeatDirection": "h",
-          "repeatIteration": 1542329763703,
+          "repeatIteration": 1542555517881,
           "repeatPanelId": 13,
           "repeatedByRow": true,
           "scopedVars": {
@@ -6072,7 +6071,7 @@
             "x": 8,
             "y": 33
           },
-          "id": 125,
+          "id": 152,
           "legend": {
             "avg": false,
             "current": true,
@@ -6093,7 +6092,7 @@
           "renderer": "flot",
           "repeat": null,
           "repeatDirection": "h",
-          "repeatIteration": 1542329763703,
+          "repeatIteration": 1542555517881,
           "repeatPanelId": 104,
           "repeatedByRow": true,
           "scopedVars": {
@@ -6279,7 +6278,7 @@
             "x": 16,
             "y": 33
           },
-          "id": 126,
+          "id": 153,
           "legend": {
             "avg": false,
             "current": true,
@@ -6300,7 +6299,7 @@
           "renderer": "flot",
           "repeat": null,
           "repeatDirection": "h",
-          "repeatIteration": 1542329763703,
+          "repeatIteration": 1542555517881,
           "repeatPanelId": 105,
           "repeatedByRow": true,
           "scopedVars": {
@@ -6475,7 +6474,7 @@
         }
       ],
       "repeat": null,
-      "repeatIteration": 1542329763703,
+      "repeatIteration": 1542555517881,
       "repeatPanelId": 30,
       "scopedVars": {
         "node": {
@@ -6495,7 +6494,7 @@
         "x": 0,
         "y": 41
       },
-      "id": 127,
+      "id": 154,
       "panels": [
         {
           "aliasColors": {},
@@ -6510,7 +6509,7 @@
             "x": 0,
             "y": 28
           },
-          "id": 128,
+          "id": 155,
           "legend": {
             "avg": false,
             "current": true,
@@ -6528,7 +6527,7 @@
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
-          "repeatIteration": 1542329763703,
+          "repeatIteration": 1542555517881,
           "repeatPanelId": 18,
           "repeatedByRow": true,
           "scopedVars": {
@@ -6640,7 +6639,7 @@
             "x": 0,
             "y": 33
           },
-          "id": 129,
+          "id": 156,
           "legend": {
             "avg": false,
             "current": true,
@@ -6661,7 +6660,7 @@
           "renderer": "flot",
           "repeat": "interface",
           "repeatDirection": "h",
-          "repeatIteration": 1542329763703,
+          "repeatIteration": 1542555517881,
           "repeatPanelId": 13,
           "repeatedByRow": true,
           "scopedVars": {
@@ -6847,7 +6846,7 @@
             "x": 8,
             "y": 33
           },
-          "id": 130,
+          "id": 157,
           "legend": {
             "avg": false,
             "current": true,
@@ -6868,7 +6867,7 @@
           "renderer": "flot",
           "repeat": null,
           "repeatDirection": "h",
-          "repeatIteration": 1542329763703,
+          "repeatIteration": 1542555517881,
           "repeatPanelId": 104,
           "repeatedByRow": true,
           "scopedVars": {
@@ -7054,7 +7053,7 @@
             "x": 16,
             "y": 33
           },
-          "id": 131,
+          "id": 158,
           "legend": {
             "avg": false,
             "current": true,
@@ -7075,7 +7074,7 @@
           "renderer": "flot",
           "repeat": null,
           "repeatDirection": "h",
-          "repeatIteration": 1542329763703,
+          "repeatIteration": 1542555517881,
           "repeatPanelId": 105,
           "repeatedByRow": true,
           "scopedVars": {
@@ -7250,7 +7249,7 @@
         }
       ],
       "repeat": null,
-      "repeatIteration": 1542329763703,
+      "repeatIteration": 1542555517881,
       "repeatPanelId": 30,
       "scopedVars": {
         "node": {
@@ -7274,7 +7273,6 @@
       {
         "allValue": null,
         "current": {
-          "tags": [],
           "text": "kvm02 + kvm03 + salt01",
           "value": [
             "kvm02",
