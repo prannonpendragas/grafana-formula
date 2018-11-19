@@ -16,7 +16,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1542555218545,
+  "iteration": 1542589370289,
   "links": [],
   "panels": [
     {
@@ -222,7 +222,7 @@
         "x": 4,
         "y": 4
       },
-      "id": 242,
+      "id": 413,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -253,142 +253,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
-      "repeatPanelId": 29,
-      "scopedVars": {
-        "node": {
-          "selected": false,
-          "text": "compunaut-consul02",
-          "value": "compunaut-consul02"
-        }
-      },
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "alias": "Serf Health",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "consul_health_checks",
-          "orderByTime": "ASC",
-          "policy": "compunaut_one_year",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "passing"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "node",
-              "operator": "=~",
-              "value": "/^$node$/"
-            },
-            {
-              "condition": "AND",
-              "key": "check_id",
-              "operator": "=",
-              "value": "serfHealth"
-            }
-          ]
-        }
-      ],
-      "thresholds": "0,1",
-      "title": "$node - Consul",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "0",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": true,
-      "colorValue": true,
-      "colors": [
-        "#d44a3a",
-        "#d44a3a",
-        "#299c46"
-      ],
-      "datasource": "compunaut_influxdb",
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 1,
-        "w": 4,
-        "x": 8,
-        "y": 4
-      },
-      "id": 243,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "minSpan": 4,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "repeat": null,
-      "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -489,10 +354,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 12,
+        "x": 8,
         "y": 4
       },
-      "id": 244,
+      "id": 414,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -523,7 +388,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -624,10 +489,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 16,
+        "x": 12,
         "y": 4
       },
-      "id": 245,
+      "id": 415,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -658,7 +523,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -759,10 +624,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 20,
+        "x": 16,
         "y": 4
       },
-      "id": 246,
+      "id": 416,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -793,7 +658,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -894,10 +759,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 0,
-        "y": 5
+        "x": 20,
+        "y": 4
       },
-      "id": 247,
+      "id": 417,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -928,7 +793,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -1029,10 +894,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 4,
+        "x": 0,
         "y": 5
       },
-      "id": 248,
+      "id": 418,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -1063,7 +928,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -1164,10 +1029,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 8,
+        "x": 4,
         "y": 5
       },
-      "id": 249,
+      "id": 419,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -1198,7 +1063,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -1299,10 +1164,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 12,
+        "x": 8,
         "y": 5
       },
-      "id": 250,
+      "id": 420,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -1333,7 +1198,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -1434,10 +1299,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 16,
+        "x": 12,
         "y": 5
       },
-      "id": 251,
+      "id": 421,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -1468,7 +1333,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -1569,10 +1434,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 20,
+        "x": 16,
         "y": 5
       },
-      "id": 252,
+      "id": 422,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -1603,7 +1468,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -1704,10 +1569,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 0,
-        "y": 6
+        "x": 20,
+        "y": 5
       },
-      "id": 253,
+      "id": 423,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -1738,7 +1603,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -1839,10 +1704,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 4,
+        "x": 0,
         "y": 6
       },
-      "id": 254,
+      "id": 424,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -1873,7 +1738,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -1974,10 +1839,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 8,
+        "x": 4,
         "y": 6
       },
-      "id": 255,
+      "id": 425,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -2008,7 +1873,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -2109,10 +1974,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 12,
+        "x": 8,
         "y": 6
       },
-      "id": 256,
+      "id": 426,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -2143,7 +2008,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -2244,10 +2109,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 16,
+        "x": 12,
         "y": 6
       },
-      "id": 257,
+      "id": 427,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -2278,7 +2143,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -2379,10 +2244,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 20,
+        "x": 16,
         "y": 6
       },
-      "id": 258,
+      "id": 428,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -2413,7 +2278,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -2514,10 +2379,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 0,
-        "y": 7
+        "x": 20,
+        "y": 6
       },
-      "id": 259,
+      "id": 429,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -2548,7 +2413,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -2649,10 +2514,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 4,
+        "x": 0,
         "y": 7
       },
-      "id": 260,
+      "id": 430,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -2683,7 +2548,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -2784,10 +2649,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 8,
+        "x": 4,
         "y": 7
       },
-      "id": 261,
+      "id": 431,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -2818,7 +2683,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 29,
       "scopedVars": {
         "node": {
@@ -3068,7 +2933,7 @@
         "x": 8,
         "y": 9
       },
-      "id": 262,
+      "id": 432,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -3099,7 +2964,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 97,
       "scopedVars": {
         "keepalived_node": {
@@ -3203,7 +3068,7 @@
         "x": 16,
         "y": 9
       },
-      "id": 263,
+      "id": 433,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -3234,7 +3099,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 97,
       "scopedVars": {
         "keepalived_node": {
@@ -3484,7 +3349,7 @@
         "x": 4,
         "y": 11
       },
-      "id": 264,
+      "id": 434,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -3515,142 +3380,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
-      "repeatPanelId": 112,
-      "scopedVars": {
-        "node": {
-          "selected": false,
-          "text": "compunaut-consul02",
-          "value": "compunaut-consul02"
-        }
-      },
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "alias": "OpenVPN",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "consul_health_checks",
-          "orderByTime": "ASC",
-          "policy": "compunaut_one_year",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "passing"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "node",
-              "operator": "=~",
-              "value": "/^$node$/"
-            },
-            {
-              "condition": "AND",
-              "key": "check_id",
-              "operator": "=",
-              "value": "service:compunaut_openvpn"
-            }
-          ]
-        }
-      ],
-      "thresholds": "0,1",
-      "title": "$node - OpenVPN",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "0",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": true,
-      "colorValue": true,
-      "colors": [
-        "#d44a3a",
-        "#d44a3a",
-        "#299c46"
-      ],
-      "datasource": "compunaut_influxdb",
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 1,
-        "w": 4,
-        "x": 8,
-        "y": 11
-      },
-      "id": 265,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "minSpan": 4,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "repeat": null,
-      "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -3751,10 +3481,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 12,
+        "x": 8,
         "y": 11
       },
-      "id": 266,
+      "id": 435,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -3785,7 +3515,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -3886,10 +3616,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 16,
+        "x": 12,
         "y": 11
       },
-      "id": 267,
+      "id": 436,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -3920,7 +3650,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -4021,10 +3751,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 20,
+        "x": 16,
         "y": 11
       },
-      "id": 268,
+      "id": 437,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -4055,7 +3785,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -4156,10 +3886,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 0,
-        "y": 12
+        "x": 20,
+        "y": 11
       },
-      "id": 269,
+      "id": 438,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -4190,7 +3920,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -4291,10 +4021,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 4,
+        "x": 0,
         "y": 12
       },
-      "id": 270,
+      "id": 439,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -4325,7 +4055,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -4426,10 +4156,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 8,
+        "x": 4,
         "y": 12
       },
-      "id": 271,
+      "id": 440,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -4460,7 +4190,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -4561,10 +4291,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 12,
+        "x": 8,
         "y": 12
       },
-      "id": 272,
+      "id": 441,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -4595,7 +4325,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -4696,10 +4426,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 16,
+        "x": 12,
         "y": 12
       },
-      "id": 273,
+      "id": 442,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -4730,7 +4460,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -4831,10 +4561,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 20,
+        "x": 16,
         "y": 12
       },
-      "id": 274,
+      "id": 443,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -4865,7 +4595,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -4966,10 +4696,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 0,
-        "y": 13
+        "x": 20,
+        "y": 12
       },
-      "id": 275,
+      "id": 444,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -5000,7 +4730,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -5101,10 +4831,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 4,
+        "x": 0,
         "y": 13
       },
-      "id": 276,
+      "id": 445,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -5135,7 +4865,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -5236,10 +4966,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 8,
+        "x": 4,
         "y": 13
       },
-      "id": 277,
+      "id": 446,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -5270,7 +5000,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -5371,10 +5101,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 12,
+        "x": 8,
         "y": 13
       },
-      "id": 278,
+      "id": 447,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -5405,7 +5135,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -5506,10 +5236,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 16,
+        "x": 12,
         "y": 13
       },
-      "id": 279,
+      "id": 448,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -5540,7 +5270,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -5641,10 +5371,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 20,
+        "x": 16,
         "y": 13
       },
-      "id": 280,
+      "id": 449,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -5675,7 +5405,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -5776,10 +5506,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 0,
-        "y": 14
+        "x": 20,
+        "y": 13
       },
-      "id": 281,
+      "id": 450,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -5810,7 +5540,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -5911,10 +5641,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 4,
+        "x": 0,
         "y": 14
       },
-      "id": 282,
+      "id": 451,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -5945,7 +5675,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -6046,10 +5776,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 8,
+        "x": 4,
         "y": 14
       },
-      "id": 283,
+      "id": 452,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -6080,7 +5810,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 112,
       "scopedVars": {
         "node": {
@@ -6330,7 +6060,7 @@
         "x": 4,
         "y": 16
       },
-      "id": 284,
+      "id": 453,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -6361,142 +6091,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
-      "repeatPanelId": 145,
-      "scopedVars": {
-        "node": {
-          "selected": false,
-          "text": "compunaut-consul02",
-          "value": "compunaut-consul02"
-        }
-      },
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "alias": "compunaut_dnsmasq",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "consul_health_checks",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "passing"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "node",
-              "operator": "=~",
-              "value": "/^$node$/"
-            },
-            {
-              "condition": "AND",
-              "key": "service_name",
-              "operator": "=",
-              "value": "compunaut_dnsmasq"
-            }
-          ]
-        }
-      ],
-      "thresholds": "0,1",
-      "title": "$node - Dnsmasq",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "0",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": true,
-      "colorValue": true,
-      "colors": [
-        "#d44a3a",
-        "#d44a3a",
-        "#299c46"
-      ],
-      "datasource": null,
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 1,
-        "w": 4,
-        "x": 8,
-        "y": 16
-      },
-      "id": 285,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "minSpan": 4,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "repeat": null,
-      "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -6597,10 +6192,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 12,
+        "x": 8,
         "y": 16
       },
-      "id": 286,
+      "id": 454,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -6631,7 +6226,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -6732,10 +6327,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 16,
+        "x": 12,
         "y": 16
       },
-      "id": 287,
+      "id": 455,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -6766,7 +6361,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -6867,10 +6462,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 20,
+        "x": 16,
         "y": 16
       },
-      "id": 288,
+      "id": 456,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -6901,7 +6496,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -7002,10 +6597,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 0,
-        "y": 17
+        "x": 20,
+        "y": 16
       },
-      "id": 289,
+      "id": 457,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -7036,7 +6631,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -7137,10 +6732,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 4,
+        "x": 0,
         "y": 17
       },
-      "id": 290,
+      "id": 458,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -7171,7 +6766,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -7272,10 +6867,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 8,
+        "x": 4,
         "y": 17
       },
-      "id": 291,
+      "id": 459,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -7306,7 +6901,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -7407,10 +7002,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 12,
+        "x": 8,
         "y": 17
       },
-      "id": 292,
+      "id": 460,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -7441,7 +7036,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -7542,10 +7137,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 16,
+        "x": 12,
         "y": 17
       },
-      "id": 293,
+      "id": 461,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -7576,7 +7171,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -7677,10 +7272,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 20,
+        "x": 16,
         "y": 17
       },
-      "id": 294,
+      "id": 462,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -7711,7 +7306,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -7812,10 +7407,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 0,
-        "y": 18
+        "x": 20,
+        "y": 17
       },
-      "id": 295,
+      "id": 463,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -7846,7 +7441,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -7947,10 +7542,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 4,
+        "x": 0,
         "y": 18
       },
-      "id": 296,
+      "id": 464,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -7981,7 +7576,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -8082,10 +7677,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 8,
+        "x": 4,
         "y": 18
       },
-      "id": 297,
+      "id": 465,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -8116,7 +7711,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -8217,10 +7812,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 12,
+        "x": 8,
         "y": 18
       },
-      "id": 298,
+      "id": 466,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -8251,7 +7846,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -8352,10 +7947,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 16,
+        "x": 12,
         "y": 18
       },
-      "id": 299,
+      "id": 467,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -8386,7 +7981,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -8487,10 +8082,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 20,
+        "x": 16,
         "y": 18
       },
-      "id": 300,
+      "id": 468,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -8521,7 +8116,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -8622,10 +8217,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 0,
-        "y": 19
+        "x": 20,
+        "y": 18
       },
-      "id": 301,
+      "id": 469,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -8656,7 +8251,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -8757,10 +8352,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 4,
+        "x": 0,
         "y": 19
       },
-      "id": 302,
+      "id": 470,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -8791,7 +8386,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -8892,10 +8487,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 8,
+        "x": 4,
         "y": 19
       },
-      "id": 303,
+      "id": 471,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -8926,7 +8521,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 145,
       "scopedVars": {
         "node": {
@@ -9176,7 +8771,7 @@
         "x": 8,
         "y": 21
       },
-      "id": 304,
+      "id": 472,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -9207,7 +8802,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 2,
       "scopedVars": {
         "db_node": {
@@ -9311,7 +8906,7 @@
         "x": 16,
         "y": 21
       },
-      "id": 305,
+      "id": 473,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -9342,7 +8937,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 2,
       "scopedVars": {
         "db_node": {
@@ -9592,7 +9187,7 @@
         "x": 8,
         "y": 23
       },
-      "id": 306,
+      "id": 474,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -9623,7 +9218,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 14,
       "scopedVars": {
         "db_node": {
@@ -9727,7 +9322,7 @@
         "x": 16,
         "y": 23
       },
-      "id": 307,
+      "id": 475,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -9758,7 +9353,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 14,
       "scopedVars": {
         "db_node": {
@@ -9995,7 +9590,7 @@
         "x": 8,
         "y": 24
       },
-      "id": 308,
+      "id": 476,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -10026,7 +9621,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 19,
       "scopedVars": {
         "db_node": {
@@ -10130,7 +9725,7 @@
         "x": 16,
         "y": 24
       },
-      "id": 309,
+      "id": 477,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -10161,7 +9756,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 19,
       "scopedVars": {
         "db_node": {
@@ -10411,7 +10006,7 @@
         "x": 4,
         "y": 26
       },
-      "id": 311,
+      "id": 478,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -10442,142 +10037,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
-      "repeatPanelId": 146,
-      "scopedVars": {
-        "node": {
-          "selected": false,
-          "text": "compunaut-consul02",
-          "value": "compunaut-consul02"
-        }
-      },
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "alias": "compunaut_telegraf",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "consul_health_checks",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "passing"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "node",
-              "operator": "=~",
-              "value": "/^$node$/"
-            },
-            {
-              "condition": "AND",
-              "key": "service_name",
-              "operator": "=",
-              "value": "compunaut_telegraf"
-            }
-          ]
-        }
-      ],
-      "thresholds": "0,1",
-      "title": "$node - Telegraf",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "0",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": true,
-      "colorValue": true,
-      "colors": [
-        "#d44a3a",
-        "#d44a3a",
-        "#299c46"
-      ],
-      "datasource": null,
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 1,
-        "w": 4,
-        "x": 8,
-        "y": 26
-      },
-      "id": 312,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "minSpan": 4,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "repeat": null,
-      "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -10678,10 +10138,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 12,
+        "x": 8,
         "y": 26
       },
-      "id": 313,
+      "id": 479,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -10712,7 +10172,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -10813,10 +10273,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 16,
+        "x": 12,
         "y": 26
       },
-      "id": 314,
+      "id": 480,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -10847,7 +10307,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -10948,10 +10408,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 20,
+        "x": 16,
         "y": 26
       },
-      "id": 315,
+      "id": 481,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -10982,7 +10442,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -11083,10 +10543,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 0,
-        "y": 27
+        "x": 20,
+        "y": 26
       },
-      "id": 316,
+      "id": 482,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -11117,7 +10577,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -11218,10 +10678,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 4,
+        "x": 0,
         "y": 27
       },
-      "id": 317,
+      "id": 483,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -11252,7 +10712,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -11353,10 +10813,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 8,
+        "x": 4,
         "y": 27
       },
-      "id": 318,
+      "id": 484,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -11387,7 +10847,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -11488,10 +10948,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 12,
+        "x": 8,
         "y": 27
       },
-      "id": 319,
+      "id": 485,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -11522,7 +10982,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -11623,10 +11083,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 16,
+        "x": 12,
         "y": 27
       },
-      "id": 320,
+      "id": 486,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -11657,7 +11117,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -11758,10 +11218,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 20,
+        "x": 16,
         "y": 27
       },
-      "id": 321,
+      "id": 487,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -11792,7 +11252,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -11893,10 +11353,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 0,
-        "y": 28
+        "x": 20,
+        "y": 27
       },
-      "id": 322,
+      "id": 488,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -11927,7 +11387,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -12028,10 +11488,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 4,
+        "x": 0,
         "y": 28
       },
-      "id": 323,
+      "id": 489,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -12062,7 +11522,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -12163,10 +11623,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 8,
+        "x": 4,
         "y": 28
       },
-      "id": 324,
+      "id": 490,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -12197,7 +11657,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -12298,10 +11758,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 12,
+        "x": 8,
         "y": 28
       },
-      "id": 325,
+      "id": 491,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -12332,7 +11792,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -12433,10 +11893,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 16,
+        "x": 12,
         "y": 28
       },
-      "id": 326,
+      "id": 492,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -12467,7 +11927,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -12568,10 +12028,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 20,
+        "x": 16,
         "y": 28
       },
-      "id": 327,
+      "id": 493,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -12602,7 +12062,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -12703,10 +12163,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 0,
-        "y": 29
+        "x": 20,
+        "y": 28
       },
-      "id": 328,
+      "id": 494,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -12737,7 +12197,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -12838,10 +12298,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 4,
+        "x": 0,
         "y": 29
       },
-      "id": 329,
+      "id": 495,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -12872,7 +12332,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -12973,10 +12433,10 @@
       "gridPos": {
         "h": 1,
         "w": 4,
-        "x": 8,
+        "x": 4,
         "y": 29
       },
-      "id": 330,
+      "id": 496,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -13007,7 +12467,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 146,
       "scopedVars": {
         "node": {
@@ -13257,7 +12717,7 @@
         "x": 12,
         "y": 31
       },
-      "id": 333,
+      "id": 497,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -13288,7 +12748,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 239,
       "scopedVars": {
         "ldap_node": {
@@ -13376,6 +12836,287 @@
         "x": 0,
         "y": 32
       },
+      "id": 330,
+      "panels": [],
+      "title": "PHP LDAP Admin Service",
+      "type": "row"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 12,
+        "x": 0,
+        "y": 33
+      },
+      "id": 412,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 5,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": "ldap_node",
+      "repeatDirection": "h",
+      "scopedVars": {
+        "ldap_node": {
+          "selected": false,
+          "text": "compunaut-ldap01",
+          "value": "compunaut-ldap01"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "compunaut_phpldapadmin",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$ldap_node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "service_name",
+              "operator": "=",
+              "value": "compunaut_phpldapadmin"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$ldap_node - PHP LDAP Admin",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "#d44a3a",
+        "#299c46"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 12,
+        "x": 12,
+        "y": 33
+      },
+      "id": 498,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "minSpan": 5,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": null,
+      "repeatDirection": "h",
+      "repeatIteration": 1542589370289,
+      "repeatPanelId": 412,
+      "scopedVars": {
+        "ldap_node": {
+          "selected": false,
+          "text": "compunaut-ldap02",
+          "value": "compunaut-ldap02"
+        }
+      },
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "compunaut_phpldapadmin",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "consul_health_checks",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "passing"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "node",
+              "operator": "=~",
+              "value": "/^$ldap_node$/"
+            },
+            {
+              "condition": "AND",
+              "key": "service_name",
+              "operator": "=",
+              "value": "compunaut_phpldapadmin"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "title": "$ldap_node - PHP LDAP Admin",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 34
+      },
       "id": 76,
       "panels": [],
       "title": "Grafana Service",
@@ -13403,7 +13144,7 @@
         "h": 1,
         "w": 12,
         "x": 0,
-        "y": 33
+        "y": 35
       },
       "id": 147,
       "interval": null,
@@ -13536,9 +13277,9 @@
         "h": 1,
         "w": 12,
         "x": 12,
-        "y": 33
+        "y": 35
       },
-      "id": 331,
+      "id": 499,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -13569,7 +13310,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 147,
       "scopedVars": {
         "monitor_node": {
@@ -13655,7 +13396,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 34
+        "y": 36
       },
       "id": 74,
       "panels": [],
@@ -13684,7 +13425,7 @@
         "h": 1,
         "w": 12,
         "x": 0,
-        "y": 35
+        "y": 37
       },
       "id": 148,
       "interval": null,
@@ -13817,9 +13558,9 @@
         "h": 1,
         "w": 12,
         "x": 12,
-        "y": 35
+        "y": 37
       },
-      "id": 332,
+      "id": 500,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -13850,7 +13591,7 @@
       ],
       "repeat": null,
       "repeatDirection": "h",
-      "repeatIteration": 1542555218545,
+      "repeatIteration": 1542589370289,
       "repeatPanelId": 148,
       "scopedVars": {
         "haproxy_node": {
@@ -14047,6 +13788,7 @@
       {
         "allValue": null,
         "current": {
+          "tags": [],
           "text": "All",
           "value": [
             "$__all"
@@ -14073,6 +13815,7 @@
       {
         "allValue": null,
         "current": {
+          "tags": [],
           "text": "All",
           "value": [
             "$__all"
