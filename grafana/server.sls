@@ -39,17 +39,6 @@ grafana_packages:
 
 {%- if server.dashboards.enabled %}
 
-grafana_copy_default_dashboards:
-  file.recurse:
-  - name: {{ server.dashboards.path }}
-  - source: salt://grafana/files/dashboards
-  - user: grafana
-  - group: grafana
-  - require:
-    - pkg: grafana_packages
-  - require_in:
-    - service: grafana_service
-
 grafana_set_up_provisioner:
   file.managed:
     - name: /usr/share/grafana/dashboards/provisioner.yaml
