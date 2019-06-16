@@ -3,7 +3,7 @@
 
 grafana_packages:
   pkg.installed:
-  - names: {{ server.pkgs }}
+  - names: {{ server.pkgs|tojson }}
   - refresh: True
 
 /etc/grafana/grafana.ini:
